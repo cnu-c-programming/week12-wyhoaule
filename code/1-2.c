@@ -5,7 +5,7 @@ int main(int argc, const char* argv[]) {
     if (argc < 2) 
         return 0;
 
-    for (int i = 0; i < sizeof(argv); i++) {
+    for (int i = 0; i < argc; ++i) {
     const char* filename = argv[1];
     char buffer[256] = {0};
 
