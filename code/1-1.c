@@ -2,8 +2,8 @@
 
 int main(int argc, const char* argv[]) {
 
-if (argc < 2) 
-    return 0;
+    if (argc < 2)
+        return 0;
 
     const char* filename = argv[1];
     char buffer[256] = {0};
@@ -14,6 +14,8 @@ if (argc < 2)
 
     fgets(buffer, sizeof(buffer), fp);
     fclose(fp);
+
     printf("%s\n", buffer);
 
     return 0;
+}
