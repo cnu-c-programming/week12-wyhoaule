@@ -2,11 +2,11 @@
 
 void cat(const char* filename) {
     FILE* fp = fopen(filename, "r");
-    if (fp == NULL) {
+    if (fp == NULL)
         return;
-    }
+    
     int c;
-    while ((c = fgetc(fp)) != NULL)
+    while ((c = fgetc(fp)) != EOF)
         putchar(c);
 
     fclose(fp);
