@@ -26,6 +26,5 @@ int main(int argc, const char* argv[]) {
 
 
     fclose(fp);
-    return 0;
 }
 
