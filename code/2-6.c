@@ -8,8 +8,19 @@ int main(int argc, const char* argv[]) {
     FILE* fp = fopen(argv[1], "r");
     const char* target_str = argv[2];
 
+    if (fp == NULL) {
+        printf("파일을 열 수 없습니다.\n");
+        return 1;
+    }
+    char buffer[1024];
 
-    
+    while (fgets(buffer, sizeof(buffer), fp) != NULL) {
+        if (strstr(buffer, target_str) != NULL)  {
+            printf("%s", buffer);
+        }
+    }
+
     fclose(fp);
+    return 0;
 }
 
